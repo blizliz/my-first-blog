@@ -26,7 +26,7 @@ SECRET_KEY = '-g!-%fqc=jky=sz8e1(7j^q$4%btp=a_1do$nut7b69g019#g+'
 # DEBUG = True
 DEBUG = os.environ['DJANGO_ENV'] == 'DEVELOPMENT'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'blizliz.pythonanywhere.com']
+ALLOWED_HOSTS = ['blizliz.com']
 
 
 # Application definition
