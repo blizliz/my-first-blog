@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+    <head>
+        <title>Hello</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="page-header">
+                <div class="header__content">
+                    <h1 class="logo">blizliz</h1>
+
+                    <nav class="menu__nav">
+                        <a class="menu__nav-item" href="{% url 'about' %}">
+                            MAIN
+                        </a>
+                        <a class="menu__nav-item" href="{% url 'post_list' %}">
+                            BLOG
+                        </a>
+                       <!--  <a class="menu__nav-item" href="/hobbis">
+                            HOBBIES
+                        </a> -->
+                        <a class="menu__nav-item" href="{% url 'contact' %}">
+                            CONTACT
+                        </a>
+                    </nav>
+                </div>
+            </header>
+            
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+           <!--  <div class="page-contact">
+                <div class="page-contact-item">
+                    <img class="page-contact-item-image" height="50" width="50" src="{% static '/images/email.svg' %}"/>
+                    <div class="page-contact-item-text"> lizabezlutskaya@gmail.com </div>
+                </div>
+                <div></div>
+            </div> -->
+        </div>
+    </body>
+</html>

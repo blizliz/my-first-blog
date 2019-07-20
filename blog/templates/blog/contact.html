@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contact">
+    <div class="contact-left-side">
+        <div class="salutation"> Contact </div>
+        <div class="social-networks">
+            <div class="social-networks-item">
+                <a href="https://www.facebook.com/elizaveta.bezlutskaya">
+                    <img class="page-contact-item-image" height="40" width="40" src="{% static '/images/facebook-logo-button.svg' %}"/>
+                </a>
+            </div>
+            <div class="social-networks-item">
+                <a href="">
+                    <img class="page-contact-item-image" height="40" width="40" src="{% static '/images/google-plus-logo-button.svg' %}"/>
+                </a> 
+            </div>
+            <div class="social-networks-item">
+                <a href="https://vk.com/elizavetabezlutskaya">
+                    <img class="page-contact-item-image" height="40" width="40" src="{% static '/images/vk-logo-button.svg' %}"/>
+                </a>
+            </div>
+        </div>
+        <div>
+            <p>
+                <b>Tg</b> 
+                @blizliz
+            </p>
+            <p>
+                <b>Email</b> 
+                lizabezlutskaya@gmail.com
+            </p>
+        </div>
+    </div>
+    <div class="contact-email">
+        <p> Looking forward to answering your email </p>
+        <form method="post" action="feedback_form/send_mail.php" class="">
+            <div>
+                <input type="text" name="first_name" placeholder="Name *" class="email-form-item" required>
+                <input type="email" name="email_address" placeholder="Email *" class="email-form-item">
+                <textarea name="comments" placeholder="Message" class="email-form-textarea"></textarea>
+            </div>
+            <button class="submit-form-button" >Send</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
